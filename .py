@@ -24,4 +24,9 @@ async def hello(ctx):
 async def bye(ctx):
     await ctx.send(f'Até a próxima {member.name} \U0001f642')
 
+@bot.command()
+async def joined(ctx, member: discord.Member):
+    """Says when a member joined."""
+    await ctx.send(f'{member.name} joined {discord.utils.format_dt(member.joined_at)}')
+
 bot.run("MTQ2Njg4NTU3NjQ0MjUxMTQ5Mw.GEViBi.Cvyudhw2Qf66RQJx6Vs3obTmozOO6z-BcHEn_o")
